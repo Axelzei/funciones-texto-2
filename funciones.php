@@ -52,4 +52,9 @@
         return $mis;
     }
 
+    function obtenerInstitucion($ins){
+        $in2=substr($ins, 0, 1);
+        return $ini2;
+    }
+
 ?>
