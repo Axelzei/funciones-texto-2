@@ -2,11 +2,11 @@
     // Funciones para identificadores
     function obtenerIniciales($nom){
         $palas=explode(" ",trim($nom));
-        $nombre=$palas[1];
+        $nombre=$palas[0];
         $can=strlen($nombre);
 
         $iniciales="";
-        for($i=1;$i<3;$i++){
+        for($i=0;$i<3;$i++){
             if($i<=($can-1)){
                 $iniciales=$iniciales.$nombre[$i];
             }else{
@@ -17,13 +17,24 @@
     }
 
     function obtenerAnio($anio){
-        $dos=substr($anio, 2, 3);
+
+        $dos="";
+        for($i=2;$i<4;$i++){
+            $dos=$dos.$anio[$i];
+        }
         return $dos;
     }
 
     function obtenerMesDia($medi){
-        $mes=substr($medi, 5, 6);
-        $dia=substr($medi, 8, 9);
+        $mes="";
+        $dia="";
+        for($i=5;$i<7;$i++){
+            $mes=$mes.$medi[$i];
+        }
+        for($i=8;$i<10;$i++){
+            $dia=$dia.$medi[$i];
+        }
+        
 
         $funcion=$mes.$dia;
         return $funcion;
@@ -41,7 +52,7 @@
 
         $limpio="";
         for($i=0;$i<$can;$i++){
-            $limpio=$limpio.trim($noms[$i])
+            $limpio=$limpio.trim($noms[$i]);
         }
 
         return $limpio;
@@ -58,7 +69,10 @@
     }
 
     function obtenerAnio2($anio){
-        $dos=substr($anio, 2, 3);
+        $dos="";
+        for($i=2;$i<4;$i++){
+            $dos=$dos.$anio[$i];
+        }
         return $dos;
     }
 
