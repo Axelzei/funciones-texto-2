@@ -47,4 +47,9 @@
         return $limpio;
     }
 
+    function convertirMinusculas($nom){
+        $mis=strtolower($nom);
+        return $mis;
+    }
+
 ?>
