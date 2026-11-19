@@ -34,5 +34,17 @@
         return $clave;
     }
 
+    //Funciones para generar usuario
+    function limpiarNombre($nom){
+        $noms=explode(" ",trim($nom));
+        $can=count($noms);
+
+        $limpio="";
+        for($i=0;$i<$can;$i++){
+            $limpio=$limpio.trim($noms[$i])
+        }
+
+        return $limpio;
+    }
 
 ?>
