@@ -20,4 +20,14 @@
         $dos=substr($anio, 2, 3);
         return $dos;
     }
+
+    function obtenerMesDia($medi){
+        $mes=substr($medi, 5, 6);
+        $dia=substr($medi, 8, 9);
+
+        $funcion=$mes.$dia;
+        return $funcion;
+    }
+
+    
 ?>
