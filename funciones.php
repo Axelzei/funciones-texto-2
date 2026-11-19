@@ -13,5 +13,11 @@
                 break;
             }
         }
+        return strtoupper($iniciales);
+    }
+
+    function obtenerAnio($anio){
+        $dos=substr($anio, 2, 3);
+        return $dos;
     }
 ?>
