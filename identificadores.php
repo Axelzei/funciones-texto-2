@@ -21,6 +21,11 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>Generar Identificadores</h1>
+    <ol>
+        <a href="identificadores.php">Generar Identificadores </a>
+        <a href="usuarios.php"> Generar Usuario</a>
+    </ol>
     <form method="POST" action="">
     <label for="nom">Ingrese su nombre completo:</label>
     <input type="text" step="any" name="nom" id="nom" required>
