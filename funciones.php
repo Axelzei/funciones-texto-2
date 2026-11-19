@@ -29,5 +29,10 @@
         return $funcion;
     }
 
-    
+    function generarClave($ini, $an, $md){
+        $clave=$ini.$an.$md;
+        return $clave;
+    }
+
+
 ?>
