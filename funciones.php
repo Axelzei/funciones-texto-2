@@ -53,8 +53,13 @@
     }
 
     function obtenerInstitucion($ins){
-        $in2=substr($ins, 0, 1);
+        $in2=substr(strtolower($ins), 0, 1);
         return $ini2;
+    }
+
+    function obtenerAnio2($anio){
+        $dos=substr($anio, 2, 3);
+        return $dos;
     }
 
 ?>
