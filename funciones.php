@@ -62,4 +62,9 @@
         return $dos;
     }
 
+    function generarUsuario($nom, $ins, $anio){
+        $usuario=$nom.$ins.$anio;
+        return $usuario;
+    }
+
 ?>
