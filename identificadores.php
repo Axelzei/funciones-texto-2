@@ -18,20 +18,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="dis.css" type="text/css">
+    <title>Identificadores</title>
 </head>
 <body>
     <h1>Generar Identificadores</h1>
-    <ol>
-        <a href="identificadores.php">Generar Identificadores </a>
+    <section class="menu_c">
+        <ol class="menu">
+            <a href="identificadores.php">Generar Identificadores </a>
         <a href="usuarios.php"> Generar Usuario</a>
-    </ol>
+        </ol>
+    </section>
     <form method="POST" action="">
     <label for="nom">Ingrese su nombre completo:</label>
     <input type="text" step="any" name="nom" id="nom" required>
     <br><br>
 
-    <label for="fec">Ingrese su fecha de nacimiento</label>
+    <label for="fec">Ingrese su fecha de nacimiento:</label>
     <input type="date" step="any" name="fec" id="fec" required>
     <br><br>
 
@@ -41,7 +44,7 @@
 
     <?php
         if(isset($_POST['hacer'])){
-            echo "<p>Su identicador: <strong>".$clave."</strong></p>";
+            echo "<p>Su identicador es: <strong>".$clave."</strong></p>";
         }
     ?>
 </body>

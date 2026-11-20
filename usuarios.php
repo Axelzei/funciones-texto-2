@@ -21,25 +21,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="dis.css" type="text/css">
+    <title>Usuarios</title>
 </head>
 <body>
     <h1>Generar Usuarios</h1>
-    <ol>
-        <a href="identificadores.php">Generar Identificadores </a>
-        <a href="usuarios.php"> Generar Usuario</a>
-    </ol>
+    <section class="menu_c">
+        <ol class="menu">
+            <a href="identificadores.php">Generar Identificadores </a>
+            <a href="usuarios.php"> Generar Usuario</a>
+        </ol>
+    </section>
     <form method="POST" action="">
-    <label for="nom">Ingrese su nombre completo: </label>
+    <label for="nom">Ingrese su nombre completo:</label>
     <input type="text" step="any" name="nom" id="nom" required>
     <br><br>
 
-    <label for="fec">Ingrese el nombre de la institución: </label>
+    <label for="fec">Ingrese el nombre de la institución:</label>
     <input type="text" step="any" name="ins" id="ins" required>
     <br><br>
 
-    <label for="an">Ingresa el año en el que ingresaste</label>
-    <input type="number" step="any" name="an" id="an" required>
+    <label for="an">Ingresa el año en el que ingresaste:</label>
+    <input type="number" step="any" name="an" id="an" min="1000" max="9999" required>
     <br><br>
 
     <button type="submit" name="hacer">Crear usuario</button>
@@ -48,7 +51,7 @@
 
     <?php
         if(isset($_POST['hacer'])){
-            echo "<p>Su Usuario: <strong>".$usuario."</strong></p>";
+            echo "<p>Su Usuario es: <strong>".$usuario."</strong></p>";
         }
     ?>
 </body>
