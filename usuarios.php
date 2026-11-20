@@ -1,0 +1,58 @@
+<?php
+    require_once("funciones.php");
+
+    if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['hacer'])){
+        $nombre=strval($_POST['nom']);
+        $inst=strval($_POST['ins']);
+        $an=strval($_POST['an']);
+
+        $lipnom=limpiarNombre($nombre);
+        $nomch=convertirMinusculas($lipnom);
+        $iniciins=obtenerInstitucion($inst);
+        $anio2=obtenerAnio2($an);
+
+        $usuario=generarUsuario($nomch, $iniciins, $anio2);
+
+    }
+
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dis.css" type="text/css">
+    <title>Usuarios</title>
+</head>
+<body>
+    <h1>Generar Usuarios</h1>
+    <section class="menu_c">
+        <ol class="menu">
+            <a href="identificadores.php">Generar Identificadores </a>
+            <a href="usuarios.php"> Generar Usuario</a>
+        </ol>
+    </section>
+    <form method="POST" action="">
+    <label for="nom">Ingrese su nombre completo:</label>
+    <input type="text" step="any" name="nom" id="nom" required>
+    <br><br>
+
+    <label for="fec">Ingrese el nombre de la institución:</label>
+    <input type="text" step="any" name="ins" id="ins" required>
+    <br><br>
+
+    <label for="an">Ingresa el año en el que ingresaste:</label>
+    <input type="number" step="any" name="an" id="an" min="1000" max="9999" required>
+    <br><br>
+
+    <button type="submit" name="hacer">Crear usuario</button>
+    </form>
+    <hr>
+
+    <?php
+        if(isset($_POST['hacer'])){
+            echo "<p>Su Usuario es: <strong>".$usuario."</strong></p>";
+        }
+    ?>
+</body>
+</html>
