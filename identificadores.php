@@ -26,7 +26,7 @@
     <section class="menu_c">
         <ol class="menu">
             <a href="identificadores.php">Generar Identificadores </a>
-        <a href="usuarios.php"> Generar Usuario</a>
+            <a href="usuarios.php"> Generar Usuario</a>
         </ol>
     </section>
     <form method="POST" action="">
